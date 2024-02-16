@@ -1,22 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>5tatic_Toolkit<sup>by Damien</sup></title>
-  </head>
-  <body>
-    <header>
-      <div class="contianer">
-        <article id="Toolkit-Request" class="form">
-          <form id="kit_request" class="request">
-            <label for="user">Username</label>
-            <input id="user" type="name" placeholder="Enter Username">
-            <label for="user_pass">User Password</label>
-            <input id="user_pass" type="password" placeholder="Enter Password Here">
-            <button for="kit_request" type="submit" action="submit">Login</button>
-          </form>
-        <article>
-      </div>
-    </header>
-  </body>
-</html>
+    <head>
+        <meta charset="utf8" />
+        <title>Research:Nodejs wireframe.</title>
+        <meta author="Aaron M. Ross">
+    </head>
+    <body>
+        <header id="headerr" class="aria-placholder">
+            <style>
+                #headerr {
+                    border:3px outset red;
+                    border-radius:12px;
+                    padding:15px;
+                    margin-top: 15%;
+                    margin-bottom: 10px;
+                    background-color: radial-gradient(black,crimson, black, darkslategrey);
+                    width: 40%;
+                    height: 25%;
+                    x: relative;
+                    y: center;
+                }
+            </style>
+        </header>
+        <main id="content" name="content" class="content">            
+            <div id="bio_div" class="article">
+                <article id="bio_art" class="bio">
+                    <tile id="bio_tile" class="object">
+                        <p>This page notebook is to show the process of seeing if Node js is fit to hande AI<sup><smal>swarm</smal></sup> tasks<br>
+                        <indent>First I will start with a few prompts to GPT, and see if its worth any more time.</indent><details><summary>Hit the dropdown to break the page.</summary>
+                            <ul>
+                                <label>Prompt 1:</label>
+                                <li> - is Node.JS a viable base Code-lang for handling requirements for implementing an 'AI_Agent_Swarm'?</li>
+                                <p>
+                                    Node.js is indeed a viable base for implementing an 'AI Agent Swarm',
+                                    particularly for applications that require real-time data processing, 
+                                    efficient handling of asynchronous tasks, and extensive network communication.
+                                    Node.js's non-blocking I/O model makes it suitable for applications where performance and scalability are critical,
+                                    such as in the case of managing a swarm of AI agents that need to operate
+                                    concurrently and communicate with each other or with a central server.
+                                        <i>The strength of 'Node.JS' for such a use may include:</i>
+                                        <ol>
+                                            <li>1. Asynchronous and Event-Drivin:</li>
+                                            <p>
+                                                <small>
+                                                Node.js can handle multiple connections simultaneously in a non-blocking manner.
+                                                This is beneficial for AI agent swarms that need to process various tasks -
+                                                or communicate with other agents without waiting for each task to complete.
+                                                </small>
+                                            </p>
+                                            <li>2. Scaleability:</li>
+                                            <p><small>
+                                                Node.js is designed to be scalable, supporting a large number of - 
+                                                simultaneous connections through its event-driven architecture.
+                                                This makes it well-suited for deploying large-scale AI agent swarms that require 
+                                                efficient resource management and the ability to handle a high volume of network requests.
+                                            </small></p>
+                                            <li>3. Community and Ecosystem:</li>
+                                            <p><small>
+                                                Node.js has a vast and active community, along with a rich ecosystem of libraries and tools. 
+                                                This can accelerate development by providing access to a wide range of modules and -
+                                                frameworks useful for building complex applications, such as those required for managing AI agent swarms.
+                                            </small></p>
+                                            <li>4. Cross-Platform:</li>
+                                            <p><small>
+                                                Node.js applications can run on various operating systems with minimal changes,
+                                                facilitating the deployment of AI agent swarms across different environments.
+                                            </small></p>
+                                            <li>5. Real-Time Capabilities:</li>
+                                            <p><small>
+                                                With frameworks like Socket.IO, Node.js is adept at building real-time applications. 
+                                                This is particularly useful for AI agent swarms that require real-time communication and data exchange.
+                                            </small></p>
+                                        </ol>
+                                    </p>
+                                    <p>Considerations for 'Node.JS';</p><br>
+                                    <indent>
+                                        AI<sup><small>Swarm</small></sup> Requrements:
+                                    </indent>
+                                    <i>be sure that using 'Node.JS', is and effective Lang, for how you plan to implement/use/maintain your AI<sup><small>Swarm</small></sup></i>
+                                    </p>
+                                    <p>
+                                    <indent>
+                                        External Tech & CPU heavy tasks:<br>
+                                    </indent>
+                                    <i>You should be well read on the additional tech/sofware's/environments, that the AI<sup><small>Swarm</small></sup> will Operate in. ('Node.JS', is not the best with compute-intensive tasks...)</i>
+                                    </p> 
+                                    <li>Components for consideration:</li><br>
+                                        <ul>
+                                            <li>1. Miroservices Archetecture:
+                                                <ul>
+                                                    <li>Purpose:</li>
+                                                    <p><small>
+                                                        Facilitates the scaling and management of AI agents by dividing the system into smaller, independently deployable services.
+                                                    </small></p>
+                                                    <li>Benefit:</li>
+                                                    <p><small>
+                                                        Enhances scalability, makes the system more resilient, and allows for the use of different technologies where appropriate.
+                                                    </small></p>
+                                                </ul>
+                                            </li>
+                                            <li>2. Message Brokers and Event Queues:</li>
+                                            <p><small>
+                                                <ul>
+                                                    <li>Examples:</li>
+                                                    <p><small>
+                                                        RabbitMQ, Kafka.
+                                                    </small></p>
+                                                    <li>Purpos:</li>
+                                                    <p><small>
+                                                        Enable efficient message passing between AI agents or between agents and services,
+                                                        supporting patterns like publish/subscribe for event-driven architectures.
+                                                    </small></p>
+                                                    <li>Benifit:</li>
+                                                    <p><small>
+                                                        Improves communication efficiency, decouples system components, and supports scalability.
+                                                    </small></p>
+                                                </ul>
+                                            <li>3. Data Storage and Caching:</li>
+                                            <p><small>
+                                                <ul>
+                                                    <li>Optoins:</li>
+                                                    <p><small>
+                                                        NoSQL databases (MongoDB, Cassandra), in-memory data stores (Redis).
+                                                    </small></p>
+                                                    <li>Purpose:</li>
+                                                    <p><small>
+                                                        Provide fast access to data needed by AI agents, including state information, results from computations, and logs.
+                                                    </small></p>
+                                                    <li>Benefit:</li>
+                                                    <p><small>
+                                                        Enhances performance and provides flexibility in handling structured and unstructured data.
+                                                    </small></p>
+                                                </ul>
+                                            <li>4. <sup>AI</sup> and <sup>ML</sup>sup Learning Libraries:</li>
+                                            <p><small>
+                                                <ul>
+                                                    <li>Examples:</li>
+                                                    <p><small>
+                                                        TensorFlow.js, Brain.js.
+                                                    </small></p>
+                                                    <li>Purpose:</li>
+                                                    <p><small>
+                                                        Incorporate AI capabilities directly into the Node.js environment,
+                                                        allowing AI agents to perform tasks like pattern recognition, decision making, and learning from data.
+                                                    </small></p>
+                                                    <li>Benefit:</li>
+                                                    <p><small>
+                                                        Brings AI capabilities closer to the application layer, reducing the need for external AI services.
+                                                    </small></p>
+                                                </ul>
+                                            <li>5. Containerization and Orchestrations:</li>
+                                            <p><small>
+                                                <ul>
+                                                    <li>Examoples"</li>
+                                                    <p><small>
+                                                        Docker, Kubernetes.
+                                                    </small></p>
+                                                    <li>Purpose"</li>
+                                                    <p><small>
+                                                        Facilitate deployment, scaling, and management of the AI agent services in various environments.
+                                                    </small></p>
+                                                    <li>Benefit:</li>
+                                                    <p><small>
+                                                        Enhances the system's portiblity, avialability, and ease of managment
+                                                    </small></p>
+                                                </ul>
+                                            <li>6. Security & Authenitcation:</li>
+                                            <p><small>
+                                                <ul>
+                                                    <li>Mechanisms:</li>
+                                                    <p><small>
+                                                        '0Auth', JWT, HTTPS
+                                                    </small></p>
+                                                    <li>Purpose:</li>
+                                                    <p><small>
+                                                        Secure communication between agents and services, protect sensitive data, 
+                                                        and ensure that only authorized agents can perform certain actions.
+                                                    </small></p>
+                                                    <li>Benefit:</li>
+                                                    <p><small>
+                                                        Maintains the integrity and confidentiality of the swarm's operations.
+                                                    </small></p>
+                                                </ul>
+                                            <li>7. Monitoring & Logging(<i>this is the curx.</i>)</li>
+                                                <ul>
+                                                    <li>Tools:</li>
+                                                    <p><small>
+                                                        Prometheus, Grafana, ELK Stack.
+                                                    </small></p>
+                                                    <li>Purpose:</li>
+                                                    <p><small>
+                                                        Collect metrics and logs for monitoring the health and 
+                                                        performance of the AI agents and the underlying infrastructure.
+                                                    </small></p>
+                                                    <li>Benefit:</li>
+                                                    <p><small>
+                                                        Enables proactive management of the system, troubleshooting, and optimization of resources.
+                                                    </small></p>
+                                                </ul>
+                                            </small></p>
+                                            </small></p>
+                                            </small></p>
+                                            </small></p>
+                                            </small></p>
+                                        </ul>
+                                </ul>
+                        </p>
+                    </tile>
+                </article>
+            </div></detials>
+            <div id="5warm_Ovrvw" class="ecosystem">
+                <env type="Kubernetes" class="container">
+                <!-- This is a heirachal mapping of how the system with be used. level of importance, 1(being the high, not sure how high it will go.) -->
+                    <frm type="JSON"><details><summary>JSON FILE</summary>
+                        {
+                            "AI_Swarm":{
+                                "Container_env":"Kubernetes",
+                                    "Code_lang(s)":{
+                                        "Node.JS": "Deployment code_lang",
+                                        "Python3.11": "Support code_lang",
+                                        "JSON": "Config document(s)",
+                                        "NoSQL": "databases"
+                                    },
+                                    "Agen_Hierchey":{
+                                        "C.E.O._Agent": "System controler| monitor| task inprobement control| Delegates all tasks, imporovments, corrections, etc...",
+                                        "LOG_System": "To be determined",
+                                        "Acc_Agent": "Data aggregation specialist: will be responsible for collecting transactions data from either, 'clients' or 'institutions'",
+                                        "Parse_Agent": "Data Translation, to usable format",
+                                        "Proof_Agent": "Encodes transactions to the appropriate expense account",
+                                        "Batch_Agent": "Antalyzes the Encoded trasnactions, for descrepancies, errors, and anomolies| Preps transactions for entry",
+                                        "customer_serviceREP": "An agent specific to user experiance, and user experiance improvments"
+                                    },
+                                    "Resource_materials":{
+                                        "Brain.JS":"AI & ML Library",
+                                        "TensorFlow.JS":"AI & ML Library",
+                                            "Tools":{
+                                                "Plaid_systems": "bank_connections API, to be used to aggregate transactions"
+                                                "0Auth": "Authenitcation frameworks",
+                                                "code_interpreter": "Agents can use code to accomplish Requests",
+                                    },
+                                    "Security & Authentication":{
+                                        "0Auth": "Authentication APIs",
+                                        "JWT": "JSON Web Tokens, for access authorization control",
+                                        "HTTPS": "Encrypted comm over computer networks"
+                                    },
+                                    "Data_Retention [cache, storage]":{
+                                        "NoSQL":"Database for storing and accessing data",
+                                        "in-memory data store(Redis)":"Commications cache, logs, Notifications/Alerts"
+                                    },
+                                    "System_goal": "A fully autonomous bookkeeping soltuion, concept"
+                                    },
+                                }}
+                    </frm>
+                </env>
+            </div></details>
+            <label for="Resources">Resource Requirement Table</label>
+            <div id="Resources" class="resource">
+                <table>
+                    <thead row="1">Code Env</th>
+                        <tr row="1">Node.JS</tr>
+                        <tr row="2">Python</tr>
+                        <tr row="3">Kubernetes</tr>
+                    <th>Lib Requrements</th>
+                        <tr row="1">'TensorFlow.js' 'Brain.js'</tr>
+                        <tr row="2">Requests, 0Auth, TensorFlow, Brain</tr>
+                        <tr row="3">To be determined...</tr>
+                    <th>Version Requrements</th>
+                        <tr row="1">Unknown</tr>
+                        <tr row="2">Unknown</tr>
+                        <tr row="3">Unknown</tr>
+                    <th>Notes</th>
+                        <tr row="1">N/A</tr>    
+                        <tr row="2">N/A</tr>
+                        <tr row="3">N/A</tr>
+                    <th>Issues</th>
+                        <tr row="1">N/A</tr>
+                        <tr row="2">N/A</tr>
+                        <tr row="3">N/A</tr>
+                    <th>Misc.</th>
+                        <tr row="1">N/A</tr>
+                        <tr row="2">N/A</tr>
+                        <tr row="3">N/A</tr>
+                </table>
+           </div>
+        </main>
+  </body> 
+  
+  </html>
